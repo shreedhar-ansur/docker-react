@@ -2,9 +2,9 @@ sudo: required
 services:
  - docker
 before_install:
- - docker build -t shreedhardocker/docker-react -f dockerfile.dev .
+ - docker build -t shreedhardocker/docker-react -f Dockerfile.dev .
 scripts:
- - docker run -e CI=true preethamsowkar/docker-react npm run test
+ - docker run -e CI=true shreedhardocker/docker-react npm run test
 Deploy:
  provoider: elasticbeanstalk
  region: "ap-south-1"
